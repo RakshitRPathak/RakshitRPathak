@@ -12,6 +12,9 @@ Final-year B.Tech (Computer Science & Business Systems) at **VIT Vellore**, grad
 |---|---|---|
 | [**minic**](https://github.com/RakshitRPathak/minic) | A compiler in C++17: hand-written lexer, recursive-descent parser, semantic analysis, constant folding and dead-code elimination, bytecode generation with backpatching, and a stack VM. | 43 tests, run optimized and unoptimized; clean under ASan and UBSan |
 | [**cuda-gpu-bench**](https://github.com/RakshitRPathak/cuda-gpu-bench) | CUDA kernels (naive vs tiled matmul, three reduction strategies) with a benchmark harness, PTX instruction analysis and a CPU emulator that runs the real kernels. | 33 emulator checks, also under ASan and TSan. GPU timings not yet measured |
+| [**mini-kv-store**](https://github.com/RakshitRPathak/mini-kv-store) | Crash-safe LSM-tree key-value store in Java: write-ahead log with CRC and torn-tail truncation, memtable, SSTables with a sparse index and Bloom filters, k-way merge compaction, atomic MANIFEST. JDK only. | 39 tests including fault injection at every flush and compaction step; the tests were checked by deliberately planting bugs |
+| [**system-design-primitives**](https://github.com/RakshitRPathak/system-design-primitives) | LRU, O(1) LFU, token bucket, sliding-window log and counter, consistent hashing with virtual nodes, Bloom filter. JDK only. | 32 tests |
+| [**dsa-patterns**](https://github.com/RakshitRPathak/dsa-patterns) | Interview patterns in Java organised by how to recognise the problem: two pointers, sliding window, monotonic stack, binary search on the answer, heaps, graphs, DP, tries and more. | 52 tests, each solution checked against a brute force on thousands of random inputs |
 
 #### Backend
 
@@ -35,9 +38,9 @@ The research results come from simulation studies or public benchmark data, as e
 <details>
 <summary><b>More projects</b></summary>
 
-* [Wildfire risk prediction](https://github.com/RakshitRPathak/Wildfire-prediction-ml-model): scikit-learn ensemble and Flask dashboard on the UCI Forest Fires data, reporting measured accuracy next to the projected figures.
+* [Wildfire risk prediction](https://github.com/RakshitRPathak/Wildfire-prediction-ml-model): scikit-learn ensemble and Flask dashboard on the UCI Forest Fires data, reporting measured accuracy next to the projected figures. Models are monotone in the fire-weather features, with tests that enforce it.
 * [Mine tremor detection](https://github.com/RakshitRPathak/Mining-tremor-detection-Patent-cum-grant): edge-AI simulation with Random Forest, physical-threshold validation and multi-node consensus.
-* [Risk-constrained emergency control](https://github.com/RakshitRPathak/Risk-Constrained-Emergency-Control-System): classifier that screens micro-interventions for safety before physical testing.
+* [Risk-constrained emergency control](https://github.com/RakshitRPathak/Risk-Constrained-Emergency-Control-System): classifier that screens micro-interventions for safety before physical testing, with tests that pin the safety thresholds.
 
 </details>
 
@@ -50,6 +53,6 @@ The research results come from simulation studies or public benchmark data, as e
 
 #### Tools
 
-**Languages:** C++, Python, TypeScript, SQL, CUDA &nbsp;·&nbsp; **Backend:** Node, Express, Flask, PostgreSQL, Redis, BullMQ &nbsp;·&nbsp; **ML:** scikit-learn, PyTorch, TensorFlow, RAG, OpenAI API &nbsp;·&nbsp; **Other:** Docker, CMake, Git, Google Cloud, Power BI
+**Languages:** C++, Java, Python, TypeScript, SQL, CUDA &nbsp;·&nbsp; **Backend:** Node, Express, Flask, PostgreSQL, Redis, BullMQ &nbsp;·&nbsp; **ML:** scikit-learn, PyTorch, TensorFlow, RAG, OpenAI API &nbsp;·&nbsp; **Other:** Docker, CMake, Git, Google Cloud, Power BI
 
 Secretary, IEEE Power & Energy Society student chapter (VIT) &nbsp;·&nbsp; Black belt and assistant instructor, karate
