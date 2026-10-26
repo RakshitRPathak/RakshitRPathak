@@ -10,6 +10,7 @@ Final-year B.Tech (Computer Science & Business Systems) at **VIT Vellore**, grad
 
 | Project | What it is | Evidence |
 |---|---|---|
+| [**PTXForge**](https://github.com/RakshitRPathak/ptxforge) | MLIR/LLVM GPU kernel compiler for fused GEMM + bias + GELU with custom passes, a C++20 measurement-driven autotuner (cost model, roofline prior, ablated advisors) and a roofline studio. | 16 C++ unit tests, clean under ASan and UBSan; C++ tuner matches the Python reference on all 3,610 configs. GPU timings not yet measured |
 | [**minic**](https://github.com/RakshitRPathak/minic) | A compiler in C++17: hand-written lexer, recursive-descent parser, semantic analysis, constant folding and dead-code elimination, bytecode generation with backpatching, and a stack VM. | 43 tests, run optimized and unoptimized; clean under ASan and UBSan |
 | [**cuda-gpu-bench**](https://github.com/RakshitRPathak/cuda-gpu-bench) | CUDA kernels (naive vs tiled matmul, three reduction strategies) with a benchmark harness, PTX instruction analysis and a CPU emulator that runs the real kernels. | 33 emulator checks, also under ASan and TSan. GPU timings not yet measured |
 | [**mini-kv-store**](https://github.com/RakshitRPathak/mini-kv-store) | Crash-safe LSM-tree key-value store in Java: write-ahead log with CRC and torn-tail truncation, memtable, SSTables with a sparse index and Bloom filters, k-way merge compaction, atomic MANIFEST. JDK only. | 39 tests including fault injection at every flush and compaction step; the tests were checked by deliberately planting bugs |
@@ -20,6 +21,7 @@ Final-year B.Tech (Computer Science & Business Systems) at **VIT Vellore**, grad
 
 | Project | What it is | Evidence |
 |---|---|---|
+| [**agentic-bug-repair**](https://github.com/RakshitRPathak/agentic-bug-repair) | Agent that repairs failing Java repos: code graph + hybrid retrieval, fault localization, patch synthesis, sandboxed verification, GitHub webhook service and a review dashboard. JDK only. | 147 tests; benchmark of 17 seeded bugs |
 | [**Healthcare Appointment & Follow-up Manager**](https://github.com/RakshitRPathak/Healthcare-Appointment-Follow-up-Manager) | Node + TypeScript + PostgreSQL. Double-booking is impossible by construction (row locks plus `EXCLUDE` constraints), emails go through a transactional outbox with retries and a dead-letter queue, and LLM visit summaries are schema-validated with a deterministic fallback. | 51 integration tests against real Postgres, including concurrency races |
 | [**PDF-to-Audio**](https://github.com/RakshitRPathak/Pdf-Audio-converter) | Flask service that turns text PDFs into narration: text re-flow, chunked TTS with retry and backoff, background jobs with cancel and caching, swappable speech backends. | 34 offline tests |
 | [**Inventory Management**](https://github.com/RakshitRPathak/Inventory-management-system) | Inventory REST API: RBAC, PBKDF2, signed tokens, hash-chained tamper-evident audit log, sensor telemetry reconciliation, optional RAG Q&A. | 15 tests, standard library only |
