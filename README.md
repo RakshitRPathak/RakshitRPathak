@@ -2,7 +2,7 @@
 
 Final-year B.Tech (Computer Science & Business Systems) at **VIT Vellore**, graduating 2027. I build backend systems, ML pipelines with honest evaluation, and lately compilers and GPU kernels. **6 patent applications** (5 published), **3 papers submitted to IEEE Access**.
 
-**Looking for:** a 6-month SDE internship, January to June 2027.
+**Looking for:** a 6-month SDE internship, January to June 2027. Portfolio: **[rakshitrpathak.github.io](https://rakshitrpathak.github.io)**
 
 ---
 
@@ -10,9 +10,9 @@ Final-year B.Tech (Computer Science & Business Systems) at **VIT Vellore**, grad
 
 | Project | What it is | Evidence |
 |---|---|---|
-| [**PTXForge**](https://github.com/RakshitRPathak/ptxforge) | MLIR/LLVM GPU kernel compiler for fused GEMM + bias + GELU with custom passes, a C++20 measurement-driven autotuner (cost model, roofline prior, ablated advisors) and a roofline studio. | 16 C++ unit tests, clean under ASan and UBSan; C++ tuner matches the Python reference on all 3,610 configs. GPU timings not yet measured |
+| [**PTXForge**](https://github.com/RakshitRPathak/ptxforge) | MLIR/LLVM GPU kernel compiler for fused GEMM + bias + GELU with custom passes, a C++20 measurement-driven autotuner (cost model, roofline prior, ablated advisors) and a roofline studio. | On a Tesla T4 the tuned kernel reaches **3,688.5 GFLOP/s, 85.6% of cuBLAS** (1.78× the untuned config, 2048³ FP32). 16 C++ unit tests, clean under ASan and UBSan. MLIR passes not yet built against LLVM |
 | [**minic**](https://github.com/RakshitRPathak/minic) | A compiler in C++17: hand-written lexer, recursive-descent parser, semantic analysis, constant folding and dead-code elimination, bytecode generation with backpatching, and a stack VM. | 43 tests, run optimized and unoptimized; clean under ASan and UBSan |
-| [**cuda-gpu-bench**](https://github.com/RakshitRPathak/cuda-gpu-bench) | CUDA kernels (naive vs tiled matmul, three reduction strategies) with a benchmark harness, PTX instruction analysis and a CPU emulator that runs the real kernels. | 33 emulator checks, also under ASan and TSan. GPU timings not yet measured |
+| [**cuda-gpu-bench**](https://github.com/RakshitRPathak/cuda-gpu-bench) | CUDA kernels (naive vs tiled matmul, three reduction strategies) with a benchmark harness, PTX instruction analysis and a CPU emulator that runs the real kernels. | Measured on a Tesla T4: `vec_add` at 257 GB/s (80% of peak); tiled matmul 1.53× the naive kernel; per-thread atomics cost about 28% of reduction bandwidth. 33 emulator checks |
 | [**mini-kv-store**](https://github.com/RakshitRPathak/mini-kv-store) | Crash-safe LSM-tree key-value store in Java: write-ahead log with CRC and torn-tail truncation, memtable, SSTables with a sparse index and Bloom filters, k-way merge compaction, atomic MANIFEST. JDK only. | 39 tests including fault injection at every flush and compaction step; the tests were checked by deliberately planting bugs |
 | [**system-design-primitives**](https://github.com/RakshitRPathak/system-design-primitives) | LRU, O(1) LFU, token bucket, sliding-window log and counter, consistent hashing with virtual nodes, Bloom filter. JDK only. | 32 tests |
 | [**dsa-patterns**](https://github.com/RakshitRPathak/dsa-patterns) | Interview patterns in Java organised by how to recognise the problem: two pointers, sliding window, monotonic stack, binary search on the answer, heaps, graphs, DP, tries and more. | 52 tests, each solution checked against a brute force on thousands of random inputs |
