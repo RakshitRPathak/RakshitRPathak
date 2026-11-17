@@ -17,11 +17,17 @@ Final-year B.Tech (Computer Science & Business Systems) at **VIT Vellore**, grad
 | [**system-design-primitives**](https://github.com/RakshitRPathak/system-design-primitives) | LRU, O(1) LFU, token bucket, sliding-window log and counter, consistent hashing with virtual nodes, Bloom filter. JDK only. | 32 tests |
 | [**dsa-patterns**](https://github.com/RakshitRPathak/dsa-patterns) | Interview patterns in Java organised by how to recognise the problem: two pointers, sliding window, monotonic stack, binary search on the answer, heaps, graphs, DP, tries and more. | 52 tests, each solution checked against a brute force on thousands of random inputs |
 
+#### AI agents and RAG
+
+| Project | What it is | Evidence |
+|---|---|---|
+| [**agentic-bug-repair**](https://github.com/RakshitRPathak/agentic-bug-repair) | Agent that repairs failing Java repos: code graph + hybrid retrieval, fault localization, patch synthesis (mutation search, then any OpenAI-compatible model), sandboxed verification, GitHub webhook service and a review dashboard. JDK only. | 11 of 17 seeded bugs fixed and verified on a clean checkout. With a local qwen2.5-coder:7b on an RTX 5050 it also fixed a bug that needs new code, in 1 of 2 runs. The benchmark refuses to report a model result if the model failed. 158 tests |
+| [**BankShield**](https://github.com/RakshitRPathak/bankshield) | RAG over a bank's policy documents *and* live (simulated) GCP state: hybrid retrieval, clearance filtering before scoring, a citation enforcer that withholds any answer not citing a retrieved clause, attack paths, hash-chained audit trail. FastAPI. | 98-question eval: recall 74/74, cited and faithful 75/75. With a local qwen2.5:7b: 67/67 shown answers cited and faithful, 8 uncited ones withheld by the enforcer, held-out refusals 21/22 vs 20/22. 115 tests |
+
 #### Backend
 
 | Project | What it is | Evidence |
 |---|---|---|
-| [**agentic-bug-repair**](https://github.com/RakshitRPathak/agentic-bug-repair) | Agent that repairs failing Java repos: code graph + hybrid retrieval, fault localization, patch synthesis, sandboxed verification, GitHub webhook service and a review dashboard. JDK only. | 147 tests; benchmark of 17 seeded bugs |
 | [**Healthcare Appointment & Follow-up Manager**](https://github.com/RakshitRPathak/Healthcare-Appointment-Follow-up-Manager) | Node + TypeScript + PostgreSQL. Double-booking is impossible by construction (row locks plus `EXCLUDE` constraints), emails go through a transactional outbox with retries and a dead-letter queue, and LLM visit summaries are schema-validated with a deterministic fallback. | 51 integration tests against real Postgres, including concurrency races |
 | [**PDF-to-Audio**](https://github.com/RakshitRPathak/Pdf-Audio-converter) | Flask service that turns text PDFs into narration: text re-flow, chunked TTS with retry and backoff, background jobs with cancel and caching, swappable speech backends. | 34 offline tests |
 | [**Inventory Management**](https://github.com/RakshitRPathak/Inventory-management-system) | Inventory REST API: RBAC, PBKDF2, signed tokens, hash-chained tamper-evident audit log, sensor telemetry reconciliation, optional RAG Q&A. | 15 tests, standard library only |
@@ -55,6 +61,6 @@ The research results come from simulation studies or public benchmark data, as e
 
 #### Tools
 
-**Languages:** C++, Java, Python, TypeScript, SQL, CUDA &nbsp;·&nbsp; **Backend:** Node, Express, Flask, PostgreSQL, Redis, BullMQ &nbsp;·&nbsp; **ML:** scikit-learn, PyTorch, TensorFlow, RAG, OpenAI API &nbsp;·&nbsp; **Other:** Docker, CMake, Git, Google Cloud, Power BI
+**Languages:** C++, Java, Python, TypeScript, SQL, CUDA &nbsp;·&nbsp; **Backend:** Node, Express, Flask, PostgreSQL, Redis, BullMQ &nbsp;·&nbsp; **ML:** scikit-learn, PyTorch, TensorFlow, RAG, OpenAI API, Ollama &nbsp;·&nbsp; **Other:** Docker, CMake, Git, Google Cloud, Power BI
 
 Secretary, IEEE Power & Energy Society student chapter (VIT) &nbsp;·&nbsp; Black belt and assistant instructor, karate
